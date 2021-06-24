@@ -5,10 +5,6 @@ import pyowm
 import numpy as np
 from tabulate import tabulate
 
-root = Tk()
-root.geometry("733x500")
-root.title("Weather App")
-root.config(bg="skyblue")
 
 
 def display(time, Min, Max):
@@ -166,11 +162,16 @@ def linegraph():
     canvas = plt.show()
 
 
+root = Tk()
+root.geometry("800x500")
+root.title("Weather App")
+root.config(bg="skyblue")
+
 Title = Label(root, text="Welcome to the Weather App!", bg="skyblue", fg="white", font="comicsansms 28 bold")
 Title.config(anchor=CENTER)
 
-text = Label(root, text="Enter the name of the City:", bg="skyblue", fg="black", font="none 20 bold")
-e = Entry(root, width=10, font=('Helvetica', 30))
+text = Label(root, text="Enter the name of the City:", bg="skyblue", fg="black", font="myriadpro 18")
+e = Entry(root, width=10, font=('Helvetica', 26))
 # e.pack()
 
 Title.grid(row=1, column=0, padx=5, pady=5)
